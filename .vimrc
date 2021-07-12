@@ -1,13 +1,18 @@
 set fileencoding=utf8
 set encoding=utf8
 set termencoding=utf8
-set ts=4
-set sw=4
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+
+"if exists('+termguicolors')
+"	  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+"	    let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+"		  set termguicolors
+"	  endif
+
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/home/vomidug/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -31,6 +36,10 @@ Plugin 'posva/vim-vue'
 
 Plugin 'nathanaelkane/vim-indent-guides'
 
+Plugin 'ErichDonGubler/vim-sublime-monokai'
+
+Plugin 'vim-airline/vim-airline'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -52,7 +61,6 @@ map <C-n> :NERDTreeToggle<CR>
 "autocmd vimenter * NERDTree
 
 let NERDTreeDirArrows=0
-
 let NERDTreeDirArrowExpandable='+'
 let NERDTreeDirArrowCollapsible='~'
 
@@ -60,20 +68,26 @@ let g:ycm_add_preview_to_completeopt = 0
 
 let g:user_emmet_leader_key=','
 
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#keymap#enabled = 0 "Не показывать текущий маппинг
+let g:airline_section_z = "\ue0a1:%l/%L Col:%c" "Кастомная графа положения курсора
+let g:Powerline_symbols='unicode' "Поддержка unicode
+let g:airline#extensions#xkblayout#enabled = 0 "Про это позже расскажу
 
-let g:indent_guides_enable_on_vim_startup = 1
+"let g:indent_guides_enable_on_vim_startup = 1
 
-set background=dark
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
-hi IndentGuidesOdd  ctermbg=darkgrey
-hi IndentGuidesEven ctermbg=darkgrey
+"set background=dark
+"let g:indent_guides_start_level = 2
+"let g:indent_guides_guide_size = 1
+"hi IndentGuidesOdd  ctermbg=darkgrey
+"hi IndentGuidesEven ctermbg=darkgrey
 
 :iabbrev <// </<C-X><C-O>
 
 " let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.vim/snippets_custom.json')), "\n"))
 
-colorscheme atom-dark-256
+"colorscheme atom-dark-256
+colorscheme sublimemonokai
 set number
 syntax on
 filetype plugin on
@@ -83,5 +97,11 @@ set autoindent
 set smartcase
 set wildmenu
 set cursorline
+hi CursorLineNr term=bold cterm=bold ctermfg=012 gui=bold
+hi CursorLine term=bold cterm=bold guibg=Grey40
 set visualbell
 set scrolloff=5
+set pastetoggle=<F2>
+set ts=4
+set sw=4
+
