@@ -1,0 +1,12 @@
+package {{FILE}}
+
+import (
+	"fmt"
+
+)
+
+func main() {
+
+	
+
+}
