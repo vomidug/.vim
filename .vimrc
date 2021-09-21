@@ -1,7 +1,6 @@
 set fileencoding=utf8
 set encoding=utf8
 set termencoding=utf8
-set termguicolors
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
