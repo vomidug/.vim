@@ -80,6 +80,13 @@ set wildmenu
 set cursorline
 hi CursorLineNr term=bold cterm=bold ctermfg=012 gui=bold
 hi CursorLine term=bold cterm=bold guibg=Grey40
+
+let &t_SI = "\<Esc>[2 q"
+let &t_SR = "\<Esc>[1 q"
+let &t_EI = "\<Esc>[2 q""]"
+
+hi MatchParen ctermbg=red guibg=green term=none cterm=none gui=bold
+
 set visualbell
 set scrolloff=5
 set pastetoggle=<F2>
