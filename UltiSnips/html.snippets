@@ -1,0 +1,27 @@
+snippet "</" "Cover with tag" rA
+<${1:div} ${2:class="${3}"}>
+	$0${VISUAL}
+</$1>
+endsnippet
+
+snippet "<>" "Cover with tag" rA
+<${1:div} />
+endsnippet
+
+#snippet "h1" "Cover with h1" rA
+#<h1>
+#	$0${VISUAL}</h1>
+#endsnippet
+
+snippet "(\w+).par" "test" r
+(`!p snip.rv = match.group(1)`)$0
+endsnippet
+
+snippet letter
+Dear $1,
+$0
+Yours sincerely,
+$2 
+endsnippet
+
+

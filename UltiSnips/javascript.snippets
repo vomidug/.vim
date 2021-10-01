@@ -6,18 +6,66 @@ snippet gelid "description"
 document.getElementById("$0")
 endsnippet
 
-snippet aget "app.get()"
-app.get('$0', async (req, res) => {
+snippet areq "app.get/post etc"
+app.${1}('/${2}', async (req, res) => {
 
+	$0
+	return
+
+})
+endsnippet
+
+snippet aget "app.get()"
+app.get('$1', async (req, res) => {
+
+	$0	
 	return 
 
 })
 endsnippet
 
 snippet apost "app.post()"
-app.post('$0', async (req, res) => {
+app.post('$1', async (req, res) => {
 
+	$0
 	return 
 
+})
+endsnippet
+
+snippet forin "for (prop in prop)"
+for (${1:prop} in ${2:$1}s){
+
+	$0
+
+}
+endsnippet
+
+snippet forof "for (prop of prop)"
+for (${1:prop} of ${2:$1}s){
+
+	$0
+
+}
+endsnippet
+
+snippet '.map' ".map( elem => {} )" rA
+.map( ${1:elem} => {
+	$0
+})
+endsnippet
+
+snippet initExpress "Init Express App"
+var app = require("express")
+const PORT = ${1:3000}
+
+$0
+
+app.listen(PORT, (err) => {
+	if (err){
+		console.log({err})
+	} else {
+		console.log("Application is listening on port " + PORT)
+	}
 })
 endsnippet

@@ -16,14 +16,17 @@ let NERDTreeDirArrowExpandable='+'
 let NERDTreeDirArrowCollapsible='~'
 
 Plugin 'jiangmiao/auto-pairs'
+
 Plugin 'ycm-core/YouCompleteMe'
+
 let g:ycm_add_preview_to_completeopt = 0
 set completeopt-=preview
 Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
 let g:UltiSnipsExpandTrigger="<C-x>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<c-f>"
+let g:UltiSnipsJumpBackwardTrigger="<c-g>"
+
+Plugin 'honza/vim-snippets'
 
 Plugin 'ErichDonGubler/vim-sublime-monokai'
 

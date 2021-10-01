@@ -2,14 +2,16 @@ snippet log "description"
 console.log($0)
 endsnippet
 
-snippet <% "description"
-<% %>
+snippet '<%' "description" rA
+<%
+	$0 
+%>
 endsnippet
 	
-snippet <%= "description"
+snippet '<%=' "description" rA
 <%= %>
 endsnippet
 
-snippet <%- "description"
-<%= %>
+snippet '<%-' "description" rA
+<%- %>
 endsnippet
