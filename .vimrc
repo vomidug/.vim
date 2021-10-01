@@ -51,6 +51,11 @@ let g:airline_section_z = "\ue0a1:%l/%L Col:%c"
 let g:Powerline_symbols='unicode'
 let g:airline#extensions#xkblayout#enabled = 0
 
+"Plugin 'maxmellon/vim-jsx-pretty'
+"let g:vim_jsx_pretty_template_tags = ["html", "jsx", "js"]
+"let g:vim_jsx_pretty_highlight_close_tag = 1
+"let g:vim_jsx_pretty_colorful_config = 1
+
 Plugin 'edkolev/tmuxline.vim'
 
 Plugin 'posva/vim-vue'
