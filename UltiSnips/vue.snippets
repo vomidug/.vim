@@ -1,4 +1,5 @@
 extends html
+extends js
 snippet "^vue" "init vue template" rbA
 <template>
 
@@ -20,4 +21,9 @@ export default {
 </script>
 endsnippet	
 
+snippet 'func' "func declaration" rbA
+${1:funcname}(){
+	$0
+},
+endsnippet
 
