@@ -4,6 +4,7 @@ set termencoding=utf8
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+set viminfo+=n~/.cache/viminfo
 set rtp+=~/.config/vim/bundle/Vundle.vim
 let g:vundle#bundle_dir='~/.config/vim/bundle/'
 call vundle#begin("~/.config/vim/bundle/")
