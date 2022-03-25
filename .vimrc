@@ -11,6 +11,10 @@ let g:vundle#bundle_dir='~/.config/vim/bundle/'
 call vundle#begin("~/.config/vim/bundle/")
 
 Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'airblade/vim-gitgutter'
+set updatetime=50
+
 Plugin 'preservim/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 map <C-n> :NERDTreeToggle<CR>
@@ -62,7 +66,6 @@ let g:airline#extensions#xkblayout#enabled = 0
 "Plugin 'edkolev/tmuxline.vim'
 
 Plugin 'posva/vim-vue'
-Plugin 'airblade/vim-gitgutter'
 Plugin 'tibabit/vim-templates'
 
 call vundle#end()            " required
@@ -83,6 +86,18 @@ set wildmenu
 set cursorline
 hi CursorLineNr term=bold cterm=bold ctermfg=012 gui=bold
 hi CursorLine term=bold cterm=bold guibg=Grey40
+
+let g:gitgutter_override_sign_column_highlight = 1
+highlight SignColumn ctermbg=235
+highlight GitGutterAdd ctermbg=235
+"highlight GitGutterAdd ctermfg=28
+highlight GitGutterChange ctermbg=235
+"highlight GitGutterChange ctermfg=11
+highlight GitGutterDelete ctermbg=235
+highlight GitGutterDelete ctermfg=9
+let g:gitgutter_sign_added='++'
+let g:gitgutter_sign_removed='--'
+let g:gitgutter_sign_modified='~~'
 
 let &t_SI = "\<Esc>[2 q"
 let &t_SR = "\<Esc>[1 q"
