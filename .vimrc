@@ -99,11 +99,31 @@ let g:gitgutter_sign_added='++'
 let g:gitgutter_sign_removed='--'
 let g:gitgutter_sign_modified='~~'
 
+"Toggle YouCompleteMe on and off with F3
+function Toggle_ycm()
+    if g:ycm_show_diagnostics_ui == 0
+        let g:ycm_auto_trigger = 1
+        let g:ycm_show_diagnostics_ui = 1
+        :YcmRestartServer
+        :e
+        :echo "YCM on"
+    elseif g:ycm_show_diagnostics_ui == 1
+        let g:ycm_auto_trigger = 0
+        let g:ycm_show_diagnostics_ui = 0
+        :YcmRestartServer
+        :e
+        :echo "YCM off"
+    endif
+endfunction
+map <F3> :call Toggle_ycm() <CR>
+
 let &t_SI = "\<Esc>[2 q"
 let &t_SR = "\<Esc>[1 q"
 let &t_EI = "\<Esc>[2 q""]"
 
 hi MatchParen ctermbg=red guibg=green term=none cterm=none gui=bold
+
+:imap \nn <C-O>o
 
 set visualbell
 set scrolloff=5
